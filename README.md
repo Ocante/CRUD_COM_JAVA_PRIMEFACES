@@ -7,9 +7,9 @@
 ## REQUISITOS BÁSICO  E OS PASSOS QUE SEGUE PARA:
 # Criar uma aplicação simples para cadastro de usuário (nome, CPF, e-mail, telefone), com as seguintes caraterísticas :
 
-# 1. **A aplicação deve possuir a possíbilidade de inclusão, edição e exclução de usuário;
-# 2. **Utilização de linguagem java 8 e e com PrimeFaces;
-# 3. **Aplicação deve estar conectado a um Banco de Dados (Mysql);
+# 1. *A aplicação deve possuir a possíbilidade de inclusão, edição e exclução de usuário*;
+# 2. *Utilização de linguagem java 8 e e com PrimeFaces*;
+# 3. *Aplicação deve estar conectado a um Banco de Dados (Mysql*);
 
 
 # Pesquisa e Desenvolvimento
@@ -46,9 +46,9 @@
 # Baixe o arquivo "HeidiSQL 12.3.0.6589" do site oficial do HeidiSQL.
 # Execute o arquivo de instalação e siga as instruções para concluir a instalação do HeidiSQL.
 
-Para prosseguir com a criação do CRUD usando o Java e o PrimeFaces no NetBeans. Recomenda-se ler a documentação do (https://www.primefaces.org/documentation/ , ) pois o processo envolve a criação de classes de modelo, páginas JSF, controladores e configurações do banco de dados.*
+*Para prosseguir com a criação do CRUD usando o Java e o PrimeFaces no NetBeans. Recomenda-se ler a documentação do (https://www.primefaces.org/documentation/ , ) pois o processo envolve a criação de classes de modelo, páginas JSF, controladores e configurações do banco de dados.*
 
-Obs.: Algumas dificuldades que tive ao nessa criação do CRUD usando essas ferramentas são:  Configurar corretamente as dependências do projeto e lidar com a complexidade da integração entre o Java, PrimeFaces e o banco de dados.
+Obs.: *Algumas dificuldades que tive ao nessa criação do CRUD usando essas ferramentas são:  Configurar corretamente as dependências do projeto e lidar com a complexidade da integração entre o Java, PrimeFaces e o banco de dados.*
 
 @ocante🙏
 
