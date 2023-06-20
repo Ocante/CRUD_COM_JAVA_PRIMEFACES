@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Cadastro de Usuário</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <p:commandButton style="background-color: green;" value="Cadastrar" update=":form:dados" 
+                             actionListener="#{manageBeanUsuario.reinstanciar()}" oncomplete="PF('dlg2').show();" />
+
+            <p:dataTable var="item" value="#{manageBeanUsuario.lista}">
+                <p:column headerText="ID">
+                    <h:outputText value="#{item.id}" />     
+                </p:column>
+                <p:column headerText="Nome">
+                    <h:outputText value="#{item.nome}" />     
+                </p:column>
+                <p:column headerText="CPF">
+                    <h:outputText value="#{item.cpf}" />     
+                </p:column>
+                <p:column headerText="Email">
+                    <h:outputText value="#{item.email}" />     
+                </p:column>   
+                <p:column headerText="Telefone">
+                    <h:outputText value="#{item.telefone}" />     
+                </p:column>  
+
+                <p:column headerText="">
+                    <p:commandButton style="background-color: yellow;" value="Editar" update=":form:dados" 
+                                     actionListener="#{manageBeanUsuario.selecionar_item(item,2)}" oncomplete="PF('dlg2').show();" />
+                    <p:commandButton style="background-color: red;" value="Excluir" update=":form:dados" 
+                                     actionListener="#{manageBeanUsuario.selecionar_item(item,3)}" oncomplete="PF('dlg2').show();" />
+                </p:column>
+
+            </p:dataTable>
+
+            <p:dialog header="Cadastro de novo usuario" widgetVar="dlg2" modal="true" height="150">
+                <p:panelGrid id="dados" columns="1">
+                    <p:panelGrid columns="2">
+                        <h:outputText value="Nome" />  
+                        <p:inputText value="#{manageBeanUsuario.usuario.nome}" />
+                        <h:outputText value="CPF" />  
+                        <p:inputText value="#{manageBeanUsuario.usuario.cpf}" />
+                        <h:outputText value="Email" />  
+                        <p:inputText value="#{manageBeanUsuario.usuario.email}" />
+                        <h:outputText value="Telefone" />  
+                        <p:inputText value="#{manageBeanUsuario.usuario.telefone}" />
+                    </p:panelGrid>
+
+                    <p:commandButton value="#{manageBeanUsuario.tipo_acao eq 1 ? 'Salvar' 
+                                              :manageBeanUsuario.tipo_acao eq 2 ? 'Salvar'
+                                              :manageBeanUsuario.tipo_acao eq 3 ? 'Excluir':''}" 
+                                     update=":form" actionListener="#{manageBeanUsuario.criar()}" oncomplete="PF('dlg2').hide();" />
+
+
+                </p:panelGrid>
+            </p:dialog>
+        </h:form>
+    </h:body>
+</html>
