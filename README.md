@@ -48,6 +48,8 @@
 
 Para prosseguir com a criação do CRUD usando o Java e o PrimeFaces no NetBeans. Recomenda-se ler a documentação do (https://www.primefaces.org/documentation/ , ) pois o processo envolve a criação de classes de modelo, páginas JSF, controladores e configurações do banco de dados.*
 
+Obs.: Algumas dificuldades que tive ao nessa criação do CRUD usando essas ferramentas são:  Configurar corretamente as dependências do projeto e lidar com a complexidade da integração entre o Java, PrimeFaces e o banco de dados.
+
 @ocante🙏
 
 
